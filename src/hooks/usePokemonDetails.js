@@ -3,12 +3,10 @@ import { useState } from "react";
 import usePokemonList from "./usePokemonList";
 import { useEffect } from "react";
 
-
-
 function usePokemonDetails(id){
 
     const [pokemon,setPokemon] = useState({})
-    let pokemonListHookResponse = [];
+    
     async function downloadPokemons(){
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
         const pokemonOfSameType = await axios.get(`https://pokeapi.co/api/v2/type/${response.data.types? response.data.types[0].type.name: ``}`)
@@ -30,7 +28,7 @@ function usePokemonDetails(id){
 
     useEffect(()=>{
         downloadPokemons()
-        console.log("LIIIIIST",pokemon.types,pokemonListState);
+        console.log("LIST=>",pokemon.types,pokemonListState);
     },[])
 
     return {pokemon,pokemonListState}
