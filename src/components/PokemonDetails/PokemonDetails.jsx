@@ -18,8 +18,8 @@ function PokemonDetails({pokemonName}){
 
           {
             pokemon.types && pokemon.similarPokemon &&
-            <div>
-                More{pokemon.types[0]}type pokemon
+            <div className="more-type">
+                More {pokemon.types[0]} type pokemon
                 <ul>
                 {pokemon.similarPokemon.map((p)=> <li key={p.pokemon.url}>{p.pokemon.name}</li>)}
                 </ul>

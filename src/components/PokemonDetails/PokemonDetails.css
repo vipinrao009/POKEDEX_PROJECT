@@ -40,3 +40,13 @@
    border-radius: 20%;
    font-size: large;
 }
+
+@media (max-width:480px){
+   .outer-pokedex {
+      margin-left: 0%;
+   }
+}
+
+.more-type{
+   margin-top: 1rem;
+}

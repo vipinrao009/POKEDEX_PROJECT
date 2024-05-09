@@ -19,3 +19,11 @@ a{
     color: rgb(0, 125, 235);
 
 }
+@media (max-width:460px){
+    .outer-pokedex{
+        width: fit-content;
+    }
+    #root{
+        margin-left: 21px;
+    }
+}
